@@ -23,19 +23,21 @@ const PostCard = ({ post, index }) => {
       className="relative overflow-hidden rounded-t-md"
     >
       {/* Image top card */}
-      <Link
-        href={`/${post.url}`}
-        className="relative block overflow-hidden group"
-      >
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={1064}
-          height={644}
-          className="object-cover object-center h-[400px] !max-w-full duration-300
+      {post.image && (
+        <Link
+          href={`/${post.url}`}
+          className="relative block overflow-hidden group"
+        >
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={1064}
+            height={644}
+            className="object-cover object-center h-[400px] !max-w-full duration-300
             transition-all ease-in-out group-hover:scale-[1.05] rounded-t-md"
-        />
-      </Link>
+          />
+        </Link>
+      )}
 
       <div className="p-4 bg-[#2F2E2E] rounded-b-md">
         <p className="text-gray-500 mb-3 uppercase text-[12px] tracking-[1px]">
