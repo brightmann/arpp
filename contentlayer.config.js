@@ -2,69 +2,68 @@ import {
   defineNestedType,
   defineDocumentType,
   makeSource,
-} from 'contentlayer/source-files';
+} from 'contentlayer/source-files'
 
 const Post = defineDocumentType(() => ({
-  name: "Post",
+  name: 'Post',
   filePathPattern: `blog/*.mdx`,
-  contentType: "mdx",
+  contentType: 'mdx',
   fields: {
     title: {
-      type: "string",
-      description: "the title of the post ",
+      type: 'string',
+      description: 'the title of the post ',
       required: true,
     },
     excerpt: {
-      type:"string",
-      description: "the description of the post ",
+      type: 'string',
+      description: 'the description of the post ',
       required: true,
     },
     date: {
-      type: "date",
-      description: "the date of the post ",
+      type: 'date',
+      description: 'the date of the post ',
       required: true,
     },
     image: {
-      type: "string",
-      description: "the  featured image of the post ",
-      required: true,
+      type: 'string',
+      description: 'the  featured image of the post ',
+      required: false,
     },
     author: {
-      type: "string",
-      description: "the  author image of the post ",
+      type: 'string',
+      description: 'the  author image of the post ',
       required: true,
     },
     categories: {
-      type: "list",
+      type: 'list',
       of: Category,
-      description: "the  categories image of the post ",
+      description: 'the  categories image of the post ',
       required: true,
     },
   },
   computedFields: {
     url: {
-      type: "string",
+      type: 'string',
       resolve: (doc) => `${doc._raw.flattenedPath}`,
-    }
-  }
+    },
+  },
 }))
 
 const Category = defineNestedType(() => ({
-  name: "Category",
+  name: 'Category',
   fields: {
     title: {
-      type: "string",
-      description: "The title of the category",
+      type: 'string',
+      description: 'The title of the category',
       required: true,
-    }
-  }
+    },
+  },
 }))
 
-
 const Info = defineDocumentType(() => ({
-  name: "Info",
+  name: 'Info',
   filePathPattern: `privacies/*.mdx`,
-  contentType: "mdx",
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
@@ -79,13 +78,13 @@ const Info = defineDocumentType(() => ({
   },
   computedFields: {
     url: {
-      type: "string",
+      type: 'string',
       resolve: (doc) => `${doc._raw.flattenedPath}`,
-    }
-  }
+    },
+  },
 }))
 
 export default makeSource({
-  contentDirPath: "content",
+  contentDirPath: 'content',
   documentTypes: [Post, Info],
 })
