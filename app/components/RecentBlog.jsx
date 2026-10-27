@@ -11,8 +11,7 @@ const recentBlogContent = {
   heading: {
     title: 'Articles récents',
     subTitle: 'Mon blog',
-    description:
-      '',
+    description: '',
   },
 }
 const PostCard = ({ index, post }) => {
@@ -31,16 +30,18 @@ const PostCard = ({ index, post }) => {
       viewport={{ once: true }}
       className="bg-[#2F2E2E] relative overflow-hidden group rounded "
     >
-      <Link href={post.url} className="relative block overflow-hidden">
-        <Image
-          src={post.image}
-          alt={post.title}
-          width={1064}
-          height={544}
-          className="object-cover object-center h-[200px] duration-300
+      {post.image && (
+        <Link href={post.url} className="relative block overflow-hidden">
+          <Image
+            src={post.image}
+            alt={post.title}
+            width={1064}
+            height={544}
+            className="object-cover object-center h-[200px] duration-300
             transition-all ease-in-out group-hover:scale-[1.1]"
-        />
-      </Link>
+          />
+        </Link>
+      )}
 
       <div className="p-6 ">
         <p className="text-white mb-2 uppercase text-[12px] tracking-[1px]">
@@ -72,7 +73,9 @@ const PostCard = ({ index, post }) => {
           >
             lire l&apos;article
           </Link>
-          <span className="text-orange-500 px-4 md:px-0 ml-16 md:ml-22">Lecture 5 min</span>
+          <span className="text-orange-500 px-4 md:px-0 ml-16 md:ml-22">
+            Lecture 5 min
+          </span>
         </div>
       </div>
     </motion.div>
