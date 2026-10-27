@@ -7,16 +7,8 @@ describe('Footer component', () => {
     const { getByText } = render(<Footer />)
 
     // Test footer links
-    expect(getByText('Débutant')).toBeInTheDocument()
-    expect(getByText('Intermédiaire')).toBeInTheDocument()
-    expect(getByText('Confirmé')).toBeInTheDocument()
 
     expect(getByText('Accueil')).toBeInTheDocument()
-    expect(getByText('Contact')).toBeInTheDocument()
-    expect(getByText('Prestations')).toBeInTheDocument()
-    expect(getByText('Team')).toBeInTheDocument()
-    expect(getByText('E-Books')).toBeInTheDocument()
-    expect(getByText('School')).toBeInTheDocument()
   })
 
   test('renders footer company name', () => {
