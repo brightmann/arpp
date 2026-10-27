@@ -10,11 +10,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { HiMenu } from 'react-icons/hi'
 
 const navigationMenu = [
-  { href: '/', label: 'Accueil' },
   { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
-  { href: '/prestations', label: 'Prestations' },
-  { href: '/team', label: 'Team' },
 ]
 export default function Navigation() {
   const [open, setOpen] = useState(false)
@@ -122,22 +118,6 @@ export default function Navigation() {
               {open ? null : <HiMenu className="text-[32px] mt-2" />}
             </button>
           </div>
-
-          {/* Menu Navigation - content right - btn */}
-          <div className="border-gray-200 px-4 py-6 sm:px-6 hidden lg:contents">
-            {' '}
-            <div>
-              <Link
-                href="/#programme"
-                alt="Btn Subcribes"
-                className="block text-center text-[14px] tracking-2[2px]
-                            font-bold uppercase py-3 px-5 hover:text-orange-500 hover:shadow-2xl hover:bg-transparent border border-orange-500 text-white
-                            rounded-md"
-              >
-                Rejoignez-nous !
-              </Link>
-            </div>
-          </div>
         </div>
       </header>
 
@@ -217,21 +197,6 @@ export default function Navigation() {
                               ))}
                             </ul>
                           </div>
-                        </div>
-                      </div>
-
-                      {/* Menu Navigation - open content right - btn */}
-                      <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                        <div>
-                          <Link
-                            href="/prestations"
-                            alt="btn subscribes"
-                            className="block text-center text-[11.5px] tracking-2[2px]
-                            font-bold uppercase bg-gradient-to-r from-orange-500 to-orange-800 py-4 px-5 text-black hover:text-white
-                            rounded-md"
-                          >
-                            Rejoignez-nous !
-                          </Link>
                         </div>
                       </div>
                     </div>
