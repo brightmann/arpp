@@ -10,12 +10,9 @@ describe('Navigation', () => {
     })
 
     expect(screen.getByText('Unlcoaching')).toBeInTheDocument()
-    expect(screen.getByText('Accueil')).toBeInTheDocument()
-    expect(screen.getByText('Prestations')).toBeInTheDocument()
-    expect(screen.getByText('Team')).toBeInTheDocument()
     expect(screen.getByText('Blog')).toBeInTheDocument()
-    expect(screen.getByText('Contact')).toBeInTheDocument()
-    expect(screen.getByText('Rejoignez-nous !')).toBeInTheDocument()
+    expect(screen.queryByText('Accueil')).not.toBeInTheDocument()
+    expect(screen.queryByText('Rejoignez-nous !')).not.toBeInTheDocument()
   })
 
   // Renders the navigation menu with a hamburger icon on mobile
