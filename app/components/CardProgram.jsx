@@ -20,10 +20,6 @@ const programs = [
       'Coaching spécialisé pour les athlètes : si la compétition, le dépassement de soi et la discipline sont essentiels à votre vie et à votre bien-être, se fixer des objectifs concrets est un moyen efficace de les atteindre. Je vous propose un suivi musculation et alimentaire personnalisés pour relever les défis que vous vous fixerez.',
     mount: '3 mois (minimum)',
     time: '8h/semaine',
-    btn: {
-      href: '/prestations/#pack',
-      label: 'Ok, je change de vie !',
-    },
     image: '/images/post3.jpg',
   },
   {
@@ -33,10 +29,6 @@ const programs = [
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!',
     mount: '3 mois (minimum)',
     time: '8h/semaine',
-    btn: {
-      href: '/prestations/#pack',
-      label: 'Ok, je change de vie !',
-    },
     image: '/images/post5.jpg',
   },
   {
@@ -46,10 +38,6 @@ const programs = [
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus pariatur soluta corrupti quisquam illo ducimus adipisci recusandae possimus tempora esse, aspernatur repudiandae cupiditate ipsum enim, quibusdam porro odio sit. Quis!',
     mount: '3 mois (minimum)',
     time: '8h/semaine',
-    btn: {
-      href: '/prestations/#pack',
-      label: 'Ok, je change de vie !',
-    },
     image: '/images/post4.jpg',
   },
 ]
@@ -121,26 +109,6 @@ const CardProgram = ({ className }) => {
               >
                 {program.description}
               </motion.p>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: 0.2, duration: 0.5 },
-                }}
-                viewport={{ once: true }}
-              >
-                <Link
-                  href={program.btn.href}
-                  alt="prestations page"
-                  className="transistion-all duration-300 ease-in-out text-[14px] 
-                    tracking-[2px] font-bold uppercase text-white hover:text-orange-500 
-                    hover:border-orange-400 bg-transparent py-4 px-4 rounded hidden md:inline-block 
-                    border hover:shadow-2xl mb-10"
-                >
-                  {program.btn.label}
-                </Link>
-              </motion.button>
             </div>
             <div className="w-full md:w-4/12 mb-10">
               <motion.div
@@ -163,26 +131,6 @@ const CardProgram = ({ className }) => {
                   alt="program image"
                   className="rounded-md h-[300px] w-[400px]"
                 />
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: 0.2, duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <Link
-                    href={program.btn.href}
-                    alt="prestations page"
-                    className="transistion-all duration-300 ease-in-out text-[14px] 
-                    tracking-[2px] font-bold uppercase text-white hover:text-orange-500 
-                    hover:border-orange-400 bg-transparent py-4 px-4 rounded inline-block md:hidden mt-10
-                    border hover:shadow-2xl mb-10 "
-                  >
-                    {program.btn.label}
-                  </Link>
-                </motion.button>
               </motion.div>
             </div>
           </div>
