@@ -25,10 +25,6 @@ const heroContent = {
     subTitle: 'Personnel',
     description:
       'Allier entraînement rigoureux et nutrition équilibrée pour un mode de vie sain et durable.',
-    btn: {
-      href: '/team',
-      label: '🧡 De la team !',
-    },
   },
 }
 
@@ -124,29 +120,6 @@ const Hero = ({ className }) => {
                 >
                   {heroContent.intro.description}
                 </motion.p>
-              )}
-
-              {/* btn link */}
-
-              {heroContent.intro.btn.label && (
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: 0.2, duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                >
-                  <Link
-                    href={heroContent.intro.btn.href}
-                    alt="Team Page redirection"
-                    className=" transistion-all duration-300 ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase py-3 px-5
-                    rounded text-[#1D1D1D]  mb-20 bg-gradient-to-r from-orange-500 to-orange-800 hover:text-white"
-                  >
-                    {heroContent.intro.btn.label}
-                  </Link>
-                </motion.button>
               )}
               
               <ReviewSmall />
