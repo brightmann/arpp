@@ -16,37 +16,6 @@ const footerContent = {
           href: '/',
           label: 'Accueil',
         },
-        {
-          href: '/contact',
-          label: 'Contact',
-        },
-        {
-          href: '/prestations',
-          label: 'Prestations',
-        },
-        {
-          href: '/team',
-          label: 'Team',
-          badge: 'Coup de 🧡',
-        },
-      ],
-    },
-    {
-      heading: 'Pack',
-      links: [
-        {
-          href: '/prestations/#pack',
-          label: 'Débutant',
-          badge: 'New',
-        },
-        {
-          href: '/prestations/#pack',
-          label: 'Intermédiaire',
-        },
-        {
-          href: '/prestations/#pack',
-          label: 'Confirmé',
-        },
       ],
     },
     {
@@ -56,10 +25,6 @@ const footerContent = {
           href: '/blog',
           label: 'Blog',
           badge: 'New',
-        },
-        {
-          href: '/prestations/#E-Books',
-          label: 'E-Books',
         },
       ],
     },
