@@ -34,14 +34,16 @@ const Items = ({ currentItems, Post }) => {
                 href={`/${post.url}`}
                 className="relative block overflow-hidden"
               >
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={1064}
-                  height={644}
-                  className="object-cover object-center h-[200px] duration-300
+                {post.image && (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={1064}
+                    height={644}
+                    className="object-cover object-center h-[200px] duration-300
                     transition-all ease-in-out group-hover:scale-[1.05] rounded-t-md"
-                />
+                  />
+                )}
                 <div className="p-8">
                   <p className="text-white mb-3 uppercase text-[12px] tracking-[1px]">
                     {format(parseISO(post.date), 'LLL d, yyyy')} • {post.author}{' '}
