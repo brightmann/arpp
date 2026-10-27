@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { allPosts } from 'contentlayer/generated'
-import { compareDesc, format, parseISO } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 import { motion } from 'framer-motion'
 import CardCategory from '../CardCategory'
 
@@ -46,13 +45,8 @@ const Items = ({ currentItems }) => {
                     {format(parseISO(post.date), 'LLL d, yyyy')} • {post.author}{' '}
                   </p>
 
-                  <h3 className="mb-4 text-orange-500">
-                    <Link
-                      href={post.url}
-                      className="text-lg font-bold leading-none"
-                    >
-                      {post.title}
-                    </Link>
+                  <h3 className="mb-4 text-orange-500 text-lg font-bold leading-none">
+                    {post.title}
                   </h3>
 
                   <p className="text-white mb-3 text-[14px] tracking-[1px]">
@@ -60,8 +54,7 @@ const Items = ({ currentItems }) => {
                   </p>
 
                   <div>
-                    <Link
-                      href={post.url}
+                    <span
                       className={` text-gray-500 hover:text-white text-[12px] tracking-[2px] uppercase
                         pb-2 inline-block  duration-300 transistion-all bg-white-600
                         ease-in-out relative before:content-['']
@@ -74,7 +67,7 @@ const Items = ({ currentItems }) => {
                         hover:before:scale-z-[1]`}
                     >
                       lire l&apos;article
-                    </Link>
+                    </span>
                     <span className="text-orange-500 ml-20">Lecture 5 min</span>
                   </div>
                 </div>
@@ -86,78 +79,19 @@ const Items = ({ currentItems }) => {
   )
 }
 
-const Posts = ({ className, itemsPerPage, archive = false, params }) => {
-  const [currentItems, setCurrentItems] = useState(null)
-  const [pageCount, setPageCount] = useState(0)
-  const [itemOffset, setItemOffset] = useState(0)
-  const [clickPaginate, setClickPaginate] = useState(false)
-  const ref = useRef(null)
-
-  let items = null
-
-  if (archive === false) {
-    items = allPosts.sort((a, b) =>
-      compareDesc(new Date(a.date), new Date(b.date)),
-    )
-  } else {
-    if (params?.slug) {
-      items = allPosts.filter((post) =>
-        post.categories.some(
-          (category) =>
-            category.title
-              .toLowerCase()
-              .trim()
-              .replace(/[^\w\s-]/g, '')
-              .replace(/[\s_-]+/g, '-')
-              .replace(/^-+|-+$/g, '') === params.slug,
-        ),
-      )
-    }
-  }
-
-  useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage
-    setCurrentItems(items.slice(itemOffset, endOffset))
-    setPageCount(Math.ceil(items.length / itemsPerPage))
-
-    if (clickPaginate === true) {
-      setTimeout(function () {
-        ref.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
-      }, 300)
-      setClickPaginate(false)
-    }
-  }, [
-    setCurrentItems,
-    setPageCount,
-    setClickPaginate,
-    itemOffset,
-    itemsPerPage,
-    clickPaginate,
-    ref,
-    items,
-  ])
-
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length
-    setClickPaginate(true)
-    setItemOffset(newOffset)
-  }
-
-  if (!items) return null
-
+const Posts = ({ className, posts }) => {
   return (
     <>
-      <section className={`${className}`} ref={ref}>
+      <section className={`${className}`}>
         <div className="container mx-auto mt-10 w-auto px-4">
           <div className="flex">
             <CardCategory className="hidden lg:contents " />
 
             <div className="lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
-              <Items currentItems={currentItems} id="cat" />
+              <Items currentItems={posts} />
             </div>
           </div>
         </div>
-
       </section>
     </>
   )
