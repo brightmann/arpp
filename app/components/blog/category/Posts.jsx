@@ -27,7 +27,7 @@ const Items = ({ currentItems, Post }) => {
                 },
               }}
               viewport={{ once: true }}
-              className="bg-[#2F2E2E] relative overflow-hidden group rounded-md"
+              className="bg-white border border-gray-200 relative overflow-hidden group rounded-md"
               key={post.title}
             >
               <Link
@@ -45,10 +45,10 @@ const Items = ({ currentItems, Post }) => {
                   />
                 )}
                 <div className="p-8">
-                  <p className="text-white mb-3 uppercase text-[12px] tracking-[1px]">
+                  <p className="text-gray-500 mb-3 uppercase text-[12px] tracking-[1px]">
                     {format(parseISO(post.date), 'LLL d, yyyy')} • {post.author}{' '}
                   </p>
-                  <div className="text-white font-bold mb-3 uppercase text-[12px] tracking-[1px]"></div>
+                  <div className="text-slate-900 font-bold mb-3 uppercase text-[12px] tracking-[1px]"></div>
 
                   <h3 className="mb-4">
                     <Link
@@ -58,13 +58,13 @@ const Items = ({ currentItems, Post }) => {
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-white mb-3 text-[14px] tracking-[1px]">
+                  <p className="text-slate-700 mb-3 text-[14px] tracking-[1px]">
                     {post.excerpt}
                   </p>
                   <div>
                     <Link
                       href={`/${post.url}`}
-                      className={` text-gray-500 hover:text-white text-[12px] tracking-[2px] uppercase
+                      className={` text-gray-500 hover:text-orange-500 text-[12px] tracking-[2px] uppercase
                         pb-2 inline-block  duration-300 transistion-all bg-white-600
                         ease-in-out relative before:content-['']
                         before:absolute before:bottom-0 before:left-0 before:w-full
