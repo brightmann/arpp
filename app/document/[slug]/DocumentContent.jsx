@@ -31,7 +31,7 @@ const DocumentContent = ({ info }) => {
       <div className="mx-auto max-w-4xl">
         <div className="text-left max-w-4xl mx-auto">
           {/* Content Article */}
-          <article className="text-white text-left prose mx-auto max-w-2xl mt-10 pb-10">
+          <article className="text-left prose mx-auto max-w-2xl mt-10 pb-10">
             <MDXContent />
           </article>
         </div>
