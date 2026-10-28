@@ -50,7 +50,7 @@ const BlogContent = ({ post }) => {
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           {/* Content title post */}
-          <h2 className="text-white text-center text-4xl/none lg:text-6xl/none font-medium">
+          <h2 className="text-slate-900 text-center text-4xl/none lg:text-6xl/none font-medium">
             {post.title}
           </h2>
 
