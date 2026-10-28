@@ -19,12 +19,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body
-        className={`{inter.className} bg-[#1D1D1D] overflow-x-hidden w-full`}
+        className={`{inter.className} bg-white text-slate-900 overflow-x-hidden w-full`}
       >
         <Navigation />
         {children}
       </body>
-      <Footer className="bg-[#2F2E2E]" />
+      <Footer className="bg-white border-t border-gray-200" />
     </html>
   )
 }
