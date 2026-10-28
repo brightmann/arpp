@@ -48,7 +48,7 @@ const footerContent = {
 
 const Copyright = () => {
   return (
-    <div className="pt-2 mb-5 md:mt-5 md:pt-3 border-t border-t-gray-100 text-center text-white ">
+    <div className="pt-2 mb-5 md:mt-5 md:pt-3 border-t border-t-gray-200 text-center text-slate-700 ">
       <div className="text-center items-center mx-auto text-sm">
         &copy; 2024{' '}
         <Link href="/" className="text-orange-500">
@@ -73,14 +73,14 @@ const Footer = ({ className }) => {
           <div className="md:w-4/12 mb-5 md:mb-0">
             <Link href="#" className="text-[28px] text-orange-500 font-bold">
               Unlcoaching
-              <span className="text-white">.</span>
+              <span className="text-slate-900">.</span>
             </Link>
             <br />
             <div className="flex mt-5 pr-10">
               <span>
                 <Link
                   href="https://www.instagram.com/unlcoaching.school/"
-                  className="text-[28px] text-white hover:text-orange-200 font-bold mr-10"
+                  className="text-[28px] text-slate-900 hover:text-orange-500 font-bold mr-10"
                   alt="Instagrame-iconne"
                 >
                   <FaInstagramSquare />
@@ -89,7 +89,7 @@ const Footer = ({ className }) => {
               <span>
                 <Link
                   href="https://www.facebook.com/Unlcoaching"
-                  className="text-[28px] text-white  hover:text-orange-200  font-bold mr-10"
+                  className="text-[28px] text-slate-900  hover:text-orange-500  font-bold mr-10"
                   alt="facebook-icon"
                 >
                   <FaFacebook />
@@ -112,7 +112,7 @@ const Footer = ({ className }) => {
                           className={`${
                             link.badge ? 'flex gap-2 items-center' : ''
                           }
-                            text-white duration-300 transition-all ease-in-out hover:text-orange-500`}
+                            text-slate-700 duration-300 transition-all ease-in-out hover:text-orange-500`}
                         >
                           {link.badge ? (
                             <>
@@ -141,13 +141,13 @@ const Footer = ({ className }) => {
         <div className="text-right items-right mx-auto text-sm pb-0">
           <Link
             href="/document/privacy"
-            className="text-orange-500 hover:text-white"
+            className="text-orange-500 hover:text-orange-700"
           >
             Privacy{' '}
           </Link>{' '}
           <Link
             href="/document/terms"
-            className="text-white hover:text-orange-500"
+            className="text-slate-700 hover:text-orange-500"
           >
             Terms{' '}
           </Link>
