@@ -56,7 +56,7 @@ export default function Navigation() {
   return (
     <div>
       <header
-        className="py-4 fixed w-full z-[10] bg-[#1D1D1D] opacity-90 "
+        className="py-4 fixed w-full z-[10] bg-white opacity-90 shadow-sm "
         alt="NavBar"
       >
         <div className=" px-4 md:px-14  mx-auto flex items-center justify-between">
@@ -77,7 +77,7 @@ export default function Navigation() {
               </span>
               {/* Name Link - content left*/}
               Unlcoaching
-              <span className=" text-white">.</span>
+              <span className=" text-slate-900">.</span>
             </Link>
           </div>
 
@@ -85,7 +85,7 @@ export default function Navigation() {
           <div>
             <ul
               role="list"
-              className="hidden lg:flex space-x-8 text-white text-2xl"
+              className="hidden lg:flex space-x-8 text-slate-900 text-2xl"
             >
               {navigationMenu.map((menu, index) => (
                 <li key={menu.label}>
@@ -112,7 +112,7 @@ export default function Navigation() {
               ))}
             </ul>
             <button
-              className="lg:hidden text-lg text-white rounded-md"
+              className="lg:hidden text-lg text-slate-900 rounded-md"
               onClick={() => setOpen(true)}
             >
               {open ? null : <HiMenu className="text-[32px] mt-2" />}
@@ -148,16 +148,16 @@ export default function Navigation() {
                   leaveTo="opacity-0"
                 >
                   <Dialog.Panel className="pointer-events-auto w-screen max-w-sm">
-                    <div className="flex h-full flex-col overflow-y-scroll bg-[#1D1D1D] shadow-xl">
+                    <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                       <div className="flex-1 overflow-y-auto px-8 py-8 sm:px-12">
                         <div className="flex items-start justify-between">
-                          <Dialog.Title className="text-lg font-medium text-white">
+                          <Dialog.Title className="text-lg font-medium text-slate-900">
                             Menu
                           </Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="relative -m-2 p-2 -mt-5 -mr-5 text-white hover:text-gray-500"
+                              className="relative -m-2 p-2 -mt-5 -mr-5 text-slate-900 hover:text-gray-500"
                               onClick={() => setOpen(false)}
                             >
                               <span className="absolute -inset-0.5" />
@@ -176,7 +176,7 @@ export default function Navigation() {
                                 <li key={menu.label}>
                                   <Link
                                     href={menu.href}
-                                    className={`py-2 text-white hover:text-gray-500 inline-block relative before:content-['']
+                                    className={`py-2 text-slate-900 hover:text-orange-500 inline-block relative before:content-['']
                                     before:absolute before:bottom-0 before:left-0 before:w-full
                                     before:h-[2px] before:bg-gradient-to-r from-orange-500 to-orange-800 before:origin-[100%, 50%]
                                     before:transistion-all before:duration-300 before:ease-in-out
