@@ -34,7 +34,7 @@ export default function BlogListing({ page = 1 }) {
           aria-label="Pagination du blog"
           className="container mx-auto px-4 pb-32"
         >
-          <p className="text-center text-white mb-6">
+          <p className="text-center text-slate-700 mb-6">
             Page {page} sur {pageCount}
           </p>
           <ul className="flex flex-wrap justify-center items-center gap-3">
@@ -55,7 +55,7 @@ export default function BlogListing({ page = 1 }) {
                   {number === page ? (
                     <span
                       aria-current="page"
-                      className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded px-4 py-2 bg-white text-orange-600"
+                      className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded px-4 py-2 bg-white border border-orange-500 text-orange-600"
                     >
                       {number}
                     </span>
