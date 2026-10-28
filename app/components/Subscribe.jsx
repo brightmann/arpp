@@ -68,7 +68,7 @@ const Subscribe = ({ className }) => {
                     transition: { delay: 0.2, duration: 0.5 },
                   }}
                   viewport={{ once: true }}
-                  className="uppercase tracking-[3px] text-[12.5px] text-white flex justify-center mt-10"
+                  className="uppercase tracking-[3px] text-[12.5px] text-slate-600 flex justify-center mt-10"
                 >
                   {subscribeContent.heading.subtitle}
                 </motion.div>
@@ -83,7 +83,7 @@ const Subscribe = ({ className }) => {
                     transition: { delay: 0.3, duration: 0.5 },
                   }}
                   viewport={{ once: true }}
-                  className="text-2xl lg:text-3xl text-white"
+                  className="text-2xl lg:text-3xl text-slate-900"
                 >
                   {subscribeContent.heading.title}
                 </motion.h2>
@@ -131,7 +131,7 @@ const Subscribe = ({ className }) => {
                 transition: { delay: 0.9, duration: 0.5 },
               }}
               viewport={{ once: true }}
-              className="w-auto max-w-md mx-auto mt-10 text-center text-white text-opacity-80"
+              className="w-auto max-w-md mx-auto mt-10 text-center text-slate-600"
             >
               {message}
             </motion.p>
@@ -144,7 +144,7 @@ const Subscribe = ({ className }) => {
               transition: { delay: 0.9, duration: 0.5 },
             }}
             viewport={{ once: true }}
-            className="w-auto max-w-md mx-auto mt-10 text-center text-white text-opacity-80"
+            className="w-auto max-w-md mx-auto mt-10 text-center text-slate-600"
           >
             {subscribeContent.heading.description}
           </motion.p>
