@@ -40,7 +40,7 @@ const PostCard = ({ post, index }) => {
         </Link>
       )}
 
-      <div className="p-4 bg-[#2F2E2E] rounded-b-md">
+      <div className="p-4 bg-white border border-t-0 border-gray-200 rounded-b-md">
         <p className="text-gray-500 mb-3 uppercase text-[12px] tracking-[1px]">
           {format(parseISO(post.date), 'LLL d, yyyy')} • {post.author}
         </p>
@@ -56,7 +56,7 @@ const PostCard = ({ post, index }) => {
         <div>
           <Link
             href={`/${post.url}`}
-            className={`text-gray-500 hover:text-white text-[12px] tracking-[2px] uppercase
+            className={`text-gray-500 hover:text-orange-500 text-[12px] tracking-[2px] uppercase
             pb-2 inline-block  duration-300 transistion-all bg-white-600
             ease-in-out relative before:content-['']
             before:absolute before:bottom-0 before:left-0 before:w-full
